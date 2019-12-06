@@ -15,7 +15,7 @@ projectx-profile - for keep the records from the track action in the http server
 
 ## Amazon S3
 projectxS3 - is the bucker where our data will be stored
-It as 3 preffixes:
-track - to store the data from /track requests
-alias - to store the data from /alias requests
-profile - to store the data from /profile requests
+It as 3 preffixes corresponding to the data send from the different "Flask Actions" in each year. Once we have 3 "flask Actions" and only one logs from one year we will have:
+track2019 - to store the data from /track requests from the year 2019
+alias2019 - to store the data from /alias requests from the year 2019
+profile2019 - to store the data from /profile requests from the year 2019
