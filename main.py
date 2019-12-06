@@ -29,9 +29,9 @@ def track():
         #creates a string with the json format of the request
         user_events_json=json.dumps(user_events)
         
-        #Sends the string to firehose Delivery Stream projectx
+        #Sends the string to firehose Delivery Stream projectx-track which will write periodically on amazon S3 on the preffix track
         response = client_firehose.put_record(DeliveryStreamName='projectx-track',Record={'Data': user_events_json})  
-        return(response['HTTPStatusCode'])
+        return(str(response['ResponseMetadata']['HTTPStatusCode']))
     return('Error: Wrong Json Format/fiels')
     
 
@@ -51,9 +51,9 @@ def alias():
         #creates a string with the json format of the request
         alias_user_json=json.dumps(alias_user)
         
-        #Sends the string to firehose Delivery Stream projectx
-        response = client_firehose.put_record(DeliveryStreamName='projectx_del',Record={'Data': alias_user_json})
-        return(response['HTTPStatusCode'])
+        #Sends the string to firehose Delivery Stream projectx-alias which will write periodically on amazon S3 on the preffix alias
+        response = client_firehose.put_record(DeliveryStreamName='projectx-alias',Record={'Data': alias_user_json})
+        return(str(response['ResponseMetadata']['HTTPStatusCode']))
     return('Error: Wrong Json Format/fiels')
 
 
@@ -72,9 +72,9 @@ def profile():
         #creates a string with the json format of the request
         alias_user_json=json.dumps(alias_user)
         
-        #Sends the string to firehose Delivery Stream projectx
-        response= client_firehose.put_record(DeliveryStreamName='projectx_del',Record={'Data': alias_user_json})
-        return(response['HTTPStatusCode'])
+        #Sends the string to firehose Delivery Stream projectx-profile which will write periodically on amazon S3 on the preffix profile
+        response= client_firehose.put_record(DeliveryStreamName='projectx-profile',Record={'Data': alias_user_json})
+        return(str(response['ResponseMetadata']['HTTPStatusCode']))
     return('Error: Wrong Json Format/fiels')
 
 
