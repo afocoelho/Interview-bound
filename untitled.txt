@@ -1,0 +1,21 @@
+## Documentantion
+
+Flask Server
+## main.py is the script that runs the flask server and put the records, from flask actions, to the amazon firehose
+
+## Firehose - Delivery Streams
+For each action was created a Delivery Stream in order to separate the data and writed in different preffixes in the amazon S3
+
+4 where created
+projectx_del - for testing and exploring
+projectx-track - for keep the records from the track action in the http server
+projectx-alias - for keep the records from the track action in the http server
+projectx-profile - for keep the records from the track action in the http server
+
+
+## Amazon S3
+projectxS3 - is the bucker where our data will be stored
+It as 3 preffixes:
+track - to store the data from /track requests
+alias - to store the data from /alias requests
+profile - to store the data from /profile requests
