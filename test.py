@@ -8,6 +8,7 @@ This Script is divided into 3 parts each one testing all the 3 actions for a spe
   1.Scenario - Testing the actions with the desired records - the requests sent are all with the desired format so everything sould run smooth 
   2.Scenario - Testing the actions responses with jsons but with wrong field names - 400 bad request response is expected with the message "Error: Wrong Json Fiels"
   3.Scenario - Testing the actions responses with data that is not in json format - 400 bad request response is expected with the error message "request data was understood as *type* Instead of Json"
+NOTE: Understand the httpaddress might change specially if the instance EC2 stops and restarts.
 '''
 
 

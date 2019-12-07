@@ -1,0 +1,6 @@
+"Method","Name","# requests","# failures","Median response time","Average response time","Min response time","Max response time","Average Content Size","Requests/s"
+"GET","//",322,0,8,11,5,62,50,12.71
+"POST","/alias",163,0,17,19,12,59,6,6.43
+"POST","/profile",232,0,17,21,11,101,6,9.16
+"POST","/track",89,0,19,21,12,59,21,3.51
+"None","Aggregated",806,0,16,17,5,101,25,31.81
