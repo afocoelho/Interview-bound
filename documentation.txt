@@ -1,6 +1,10 @@
 ## Documentantion
 
-Flask Server
+## Reporting_notebook - this jupyter notebook as all the functions written and can be used to change the code.
+## Note: if you are not planning to use it to edit code it may be a good ideia to erase it or change the functions name in order to not overwrite functions
+
+
+-----------Flask Server and Amazon Architecture----------
 ## main.py is the script that runs the flask server and put the records, from flask actions, to the amazon firehose
 
 ## Firehose - Delivery Streams
@@ -19,3 +23,9 @@ It as 3 preffixes corresponding to the data send from the different "Flask Actio
 track2019 - to store the data from /track requests from the year 2019
 alias2019 - to store the data from /alias requests from the year 2019
 profile2019 - to store the data from /profile requests from the year 2019
+
+------------Test Function----------------
+## test.py is a script that test the responses of this http server to some scenarios
+
+------------locust function--------------
+## locust.py runs locust with the configuration of this API in localhost 8089
